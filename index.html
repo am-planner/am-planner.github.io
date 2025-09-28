@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whole-Body Integrated Motion Planning for Aerial Manipulators</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content-centered">
+                <h1 class="hero-title">Whole-Body Integrated Motion Planning for Aerial Manipulators</h1>
+                <div class="authors">
+                    <span class="author"><a href="https://dwl2021.github.io" target="_blank">Weiliang Deng*</a></span>
+                    <span class="author"><a href="https://xiaodao-chen.github.io" target="_blank">Hongming Chen*</a></span>
+                    <span class="author"><a href="https://fisheep9.github.io" target="_blank">Biyu Ye</a></span>
+                    <span class="author">Haoran Chen</span>
+                    <span class="author">Ziliang Li</span>
+                    <span class="author">
+                        <a href="https://scholar.google.com/citations?user=obB-btEAAAAJ&hl=zh-CN" target="_blank">Ximin Lyu</a>
+                        <a href="mailto:lvxmn@mail.sysu.edu.cn" title="通讯作者">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="affiliation">
+                    <div class="affiliation-text">
+                        Sun Yat-sen University
+                    </div>
+                    <div class="logos">
+                        <img src="assets/sysu.jpg" alt="Sun Yat-sen University" class="logo logo-sysu">
+                        <img src="assets/hilab.png" alt="HILab" class="logo logo-hilab">
+                    </div>
+                </div>
+                <div class="hero-links">
+                    <a href="https://arxiv.org/abs/2501.06493" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Paper
+                    </a>
+                    <a href="https://github.com/SYSU-HILAB/am-planner" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="#video-section" class="btn btn-accent">
+                        <i class="fas fa-play"></i> Video
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/cover.JPG" alt="Aerial Manipulator Cover" class="cover-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Abstract Section -->
+    <section class="abstract-section">
+        <div class="container">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract-content">
+                <p>Expressive motion planning for Aerial Manipulators (AMs) is essential for tackling complex manipulation tasks, yet achieving coupled trajectory planning adaptive to various tasks remains challenging, especially for those requiring aggressive maneuvers. In this work, we propose a novel whole-body integrated motion planning framework for quadrotor-based AMs that leverages flexible waypoint constraints to achieve versatile manipulation capabilities. These waypoint constraints enable the specification of individual position requirements for either the quadrotor or end-effector, while also accommodating higher-order velocity and orientation constraints for complex manipulation tasks. To implement our framework, we exploit spatio-temporal trajectory characteristics and formulate an optimization problem to generate feasible trajectories for both the quadrotor and manipulator while ensuring collision avoidance considering varying robot configurations, dynamic feasibility, and kinematic feasibility. Furthermore, to enhance the maneuverability for specific tasks, we employ Imitation Learning (IL) to facilitate the optimization process to avoid poor local optima. The effectiveness of our framework is validated through comprehensive simulations and real-world experiments, where we successfully demonstrate nine fundamental manipulation skills across various environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video-section" class="video-section">
+        <div class="container">
+            <h2 class="section-title">Demonstration Video</h2>
+            <div class="video-container">
+                <video controls class="demo-video">
+                    <source src="assets/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section class="framework-section">
+        <div class="container">
+            <h2 class="section-title">Framework Overview</h2>
+            <div class="framework-content-combined">
+                <div class="framework-image-container">
+                    <img src="assets/framework.png" alt="Framework Overview" class="framework-image-responsive">
+                </div>
+                <div class="framework-description-compact">
+                    <h3>Key Components</h3>
+                    <ul>
+                        <li><strong>Whole-body Planning:</strong> Novel integrated framework optimizing quadrotor and manipulator trajectories for coordinated motion across nine tasks (strike, grasp, lift, write, pull, push, wind, cross, press).</li>
+                        <li><strong>Flexible Waypoint Constraints:</strong> Comprehensive formulation enabling selective position, velocity, or orientation requirements for individual components with task-specific partial constraints.</li>
+                        <li><strong>IL-Guided Optimization:</strong> Imitation learning approach overcoming poor local optima in challenging scenarios through demonstration-guided waypoint sequences.</li>
+                        <li><strong>Comprehensive Validation:</strong> Extensive real-world experiments, simulations, and open-source implementation supporting reproducible research in aerial manipulation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">Real-world Experimental Results</h2>
+            <div class="results-showcase">
+                <img src="assets/result1.png" alt="Real-world Experimental Result 1" class="result-showcase-image" loading="lazy">
+                <img src="assets/result2.png" alt="Real-world Experimental Result 2" class="result-showcase-image" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section class="citation-section">
+        <div class="container">
+            <h2 class="section-title">Citation</h2>
+            <div class="citation-box">
+                <pre class="citation-text" id="citation-text">@misc{deng2025wholebodyintegratedmotionplanning,
+      title={Whole-Body Integrated Motion Planning for Aerial Manipulators}, 
+      author={Weiliang Deng and Hongming Chen and Biyu Ye and Haoran Chen and Ximin Lyu},
+      year={2025},
+      eprint={2501.06493},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2501.06493}, 
+}</pre>
+                <button class="copy-btn" onclick="copyToClipboard()">
+                    <i class="fas fa-copy"></i> Copy Citation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Sun Yat-sen University HILAB. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://arxiv.org/abs/2501.06493" target="_blank">
+                        <i class="fas fa-file-pdf"></i> arXiv
+                    </a>
+                    <a href="https://github.com/SYSU-HILAB/am-planner" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
