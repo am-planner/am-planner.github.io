@@ -22,6 +22,14 @@ body {
 }
 
 
+.results-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: center;
+}
+
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 1rem;
